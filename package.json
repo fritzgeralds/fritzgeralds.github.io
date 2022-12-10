@@ -1,0 +1,21 @@
+{
+  "name": "bootstrap-boilerplate-npm",
+  "version": "1.0.0",
+  "description": "Bootstrap Boilerplate NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch scss:css"
+  },
+  "keywords": [
+    "bootstrap",
+    "boilerplate",
+    "npm"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "sass": "^1.56.1"
+  }
+}
