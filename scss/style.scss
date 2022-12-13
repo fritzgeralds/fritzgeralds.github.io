@@ -8,6 +8,17 @@
 	--parallax-image: url(../img/hero.jpg);
 }
 
+.hero-span {
+	color : #6100df;
+	font-weight: 600;
+	border-bottom: 2px solid rgb(97, 0, 223);
+
+	&::after {
+		content: "";
+		display: block;
+	}
+}
+
 .dark {
 	background-color: rgb(38, 38, 38);
 	color: white;

@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Page Title</title>
+    <title>Fritz Dischner</title>
     <script rel="javascript" src="./js/bootstrap.bundle.min.js"></script>
+    <script defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWpfvkYa0DHIirJEDBYqJTSwjZlhYRQDM&callback=initMap&v=weekly"></script>
     <script defer rel="javascript" src="./js/main.js"></script>
+    <script defer type="module" src="./js/map.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,8 +21,8 @@
     <main>
       <section class="full-height parallax" id="hero">
         <div class="container">
-          <div class="d-flex justify-content-center align-items-center vh-100">
-            <h1 class="text-white">Page title</h1>
+          <div class="d-flex align-items-center vh-100">
+            <h1 class="text-white display-3">Hi, I'm <span class="hero-span">Fritz Dischner</span>&emsp;Welcome to my page</h1>
           </div>
           <a href="#about-gap"><i class="fa-solid fa-chevron-down text-center text-white"></i></a>
         </div>
@@ -138,22 +141,25 @@
           <div class="container p-5 contact-form">
             <div class="mx-auto pb-5 mb-5">
               <h2>Contact</h2>
-              <form id="contact-form" action="https://formspree.io/f/xnqrgayp" method="POST" class="trigger">
-                <div class="form-floating mb-3">
-                  <input type="text" class="form-control shadow-none" name="name" id="name" placeholder="Name">
-                  <label for="name" class="form-label">Name</label>
-                </div>
-                <div class="form-floating mb-3">
-                  <input type="email" class="form-control shadow-none" name="email" id="email" placeholder="Email">
-                  <label for="email" class="form-label">Email</label>
-                </div>
-                <div class="form-floating mb-3">
-                  <textarea name="message" id="message" cols="30" class="form-control shadow-none"
-                    placeholder="Message"></textarea>
-                  <label for="message" class="form-label">Message</label>
-                </div>
-                <button type="submit" class="btn btn-purple">Submit</button>
-              </form>
+                <div class="row">
+                  <form id="contact-form" action="https://formspree.io/f/xnqrgayp" method="POST" class="trigger col">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control shadow-none" name="name" id="name" placeholder="Name">
+                    <label for="name" class="form-label">Name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control shadow-none" name="email" id="email" placeholder="Email">
+                    <label for="email" class="form-label">Email</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <textarea name="message" id="message" cols="30" class="form-control shadow-none"
+                      placeholder="Message"></textarea>
+                    <label for="message" class="form-label">Message</label>
+                  </div>
+                  <button type="submit" class="btn btn-purple">Submit</button>
+                </form>
+                <div id="map_div" class="col border-light border-2"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -178,6 +184,7 @@
           </div>
       </section>
     </footer>
+    
   </body>
 
 </html>
