@@ -2,3 +2,170 @@
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
+@import "./keyframes.scss";
+
+#hero {
+	--parallax-image: url(../img/hero.jpg);
+}
+
+.dark {
+	background-color: rgb(38, 38, 38);
+	color: white;
+}
+
+.light {
+	background-color: #efefef;
+	color: black;
+}
+
+.navbar {
+	background-color:rgb(38, 38, 38) !important;
+	border-bottom: 2px solid #6100df;
+}
+
+.parallax {
+	background-color: rgb(38, 38, 38);
+	background-image: var(--parallax-image);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.sticky-nav {
+	position: fixed;
+	top: 0;
+	transition:0.4s all cubic-bezier(.3, .73, .3, .74);
+	z-index: 100;
+	filter: drop-shadow(0 2px 0.25rem #6100df);
+	border-bottom: 0 !important;
+	width: 100%;
+}
+
+footer {
+	position: relative;
+	filter: drop-shadow(0 -2px 0.25rem #6100df);
+}
+
+.fa-chevron-up {
+    background:  rgb(38, 38, 38);
+    cursor: pointer;
+    font-size: 3rem;
+    height: 3rem;
+    left: 0;
+    line-height: 45pt;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: -25px;
+    transition: background 0.5s;
+    width: 4rem;
+		border-radius: 50px 50px 0 0;
+
+		&:hover {
+			background: linear-gradient(#6100df 25%, rgb(38, 38, 38));
+	}
+}
+
+.fa-chevron-down {
+    cursor: pointer;
+    font-size: 3rem;
+    height: 3rem;
+    left: 0;
+    line-height: 35pt;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    transition: background 0.5s;
+    width: 4rem;
+		border-radius: 0 0 50px 50px;
+
+		&:hover {
+			background: linear-gradient(transparent, #6100df);
+	}
+}
+
+
+.fab {
+	height: 3rem;
+	width: 3rem;
+	transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+
+	&:hover {
+	color: #6100df;
+	transform: scale(1.3);
+	text-shadow: 0 0 0.5rem #fff;
+	}
+}
+
+#contact form {
+	opacity: 0;
+}
+
+.animate {
+	animation: popIn 1s ease;
+}
+
+textarea {
+	resize: none !important;
+	border: 0 !important;
+	border: 2px solid rgb(48, 48, 48) !important;
+	border-right: 2px solid rgb(88, 88, 88) !important;
+	border-bottom: 2px solid rgb(88, 88, 88) !important;
+	background-color: transparent !important;
+	color: white !important;
+	height: 300px !important;
+}
+
+input[type="text"], input[type="email"], textarea {
+	border: 0;
+	border: 1px solid rgb(58, 58, 58);
+	border: 2px solid rgb(48, 48, 48);
+	border-right: 2px solid rgb(88, 88, 88);
+	border-bottom: 2px solid rgb(88, 88, 88);
+	background-color: transparent;
+	color: white;
+
+	&:focus, &:active {
+		border: 0;
+		border: 1px solid rgb(58, 58, 58);
+		border-bottom: 2px solid #6100df !important;
+		background-color: transparent;
+		color: white;
+	}
+}
+
+.btn-purple {
+	background-color: rgb(38, 38, 38);
+	border: 2px solid rgb(58, 58, 58);
+	color: white;
+	transition: background 0.5s;
+	padding: 0.7em 2em;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+
+	&:hover {
+		border: 2px solid #6100df;
+		background: rgb(97 0 223 / 0.5);
+	}
+}
+
+@media (min-width: 1400px) {
+	.contact-form {
+		width: 50%;
+	}
+}
+@media (min-width: 1200px) {
+	.contact-form {
+		width: 50%;
+	}
+}
+
+@media (min-width: 992px) {
+	.contact-form {
+		width: 50%;
+	}
+}
+
