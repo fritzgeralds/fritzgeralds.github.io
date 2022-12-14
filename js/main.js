@@ -5,6 +5,7 @@ const gaps = document.querySelectorAll(".gap");
 const sections = document.querySelectorAll("section:not(#hero)");
 const contactForm = document.getElementById("contact-form");
 const heroHeight = hero.offsetHeight;
+const contactHeight = document.querySelector("#contact-form").offsetHeight;
 
 let scrollPos = window.scrollY;
 let links;
@@ -94,3 +95,16 @@ const observer = new IntersectionObserver(observerCallback, {
 const trigger = document.querySelector(".trigger");
 
 observer.observe(trigger);
+
+// Display thumbnails on modal //
+const modal = document.getElementById("modal");
+modal.style.height = `${window.innerHeight}px`;
+modal.style.width = `${window.innerWidth}px`;
+const projectThumbs = document.querySelectorAll(".img-thumbnail");
+projectThumbs.forEach ((thumb) => {
+	thumb.addEventListener("click", () => {
+		const modalImg = document.getElementById("modal-img");
+		console.log(thumb.src);
+		modalImg.src = thumb.src;
+	});
+});

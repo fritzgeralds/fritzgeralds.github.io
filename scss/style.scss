@@ -8,10 +8,17 @@
 	--parallax-image: url(../img/hero.jpg);
 }
 
+.hero-header {
+	color: white;
+	font-size: 4min;
+	font-weight: 600;
+	text-shadow: 0 0 0.5rem #000;
+}
+
 .hero-span {
 	color : #6100df;
 	font-weight: 600;
-	border-bottom: 2px solid rgb(97, 0, 223);
+	text-decoration: 2px rgb(97, 0, 223) underline;
 
 	&::after {
 		content: "";
@@ -110,7 +117,7 @@ footer {
 	}
 }
 
-#contact form {
+#contact .trigger {
 	opacity: 0;
 }
 
@@ -163,20 +170,8 @@ input[type="text"], input[type="email"], textarea {
 	}
 }
 
-@media (min-width: 1400px) {
-	.contact-form {
-		width: 50%;
+@media (max-width: 992px) {
+	#map_div {
+		height: 450px;
 	}
 }
-@media (min-width: 1200px) {
-	.contact-form {
-		width: 50%;
-	}
-}
-
-@media (min-width: 992px) {
-	.contact-form {
-		width: 50%;
-	}
-}
-
