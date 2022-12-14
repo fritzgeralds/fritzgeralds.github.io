@@ -36,7 +36,9 @@ window.addEventListener("scroll", () => {
 	if (links.length === 0) {
 		links = document.querySelectorAll(".nav-link[href^='#']");
 		links.forEach((link) => {
-			link.setAttribute("href", link.getAttribute("href") + "-gap");
+			if (!link.getAttribute("href") === "#") {
+				link.setAttribute("href", link.getAttribute("href") + "-gap");
+			}
 		});
 	}
 });
