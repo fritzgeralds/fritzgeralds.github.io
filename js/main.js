@@ -7,6 +7,7 @@ const contactForm = document.getElementById("contact-form");
 const heroHeight = hero.offsetHeight;
 const contactHeight = document.querySelector("#contact-form").offsetHeight;
 
+// SET NAVBAR TO STICKY ON SCROLL PAST HERO //
 let scrollPos = window.scrollY;
 let links;
 
@@ -96,15 +97,25 @@ const trigger = document.querySelector(".trigger");
 
 observer.observe(trigger);
 
-// Display thumbnails on modal //
+// DISPLAY PROJECT THUMBNAILS IN MODAL //
 const modal = document.getElementById("modal");
-modal.style.height = `${window.innerHeight}px`;
-modal.style.width = `${window.innerWidth}px`;
+modal.style.width = `90vw`;
+modal.style.marginLeft = `5vw`;
 const projectThumbs = document.querySelectorAll(".img-thumbnail");
 projectThumbs.forEach ((thumb) => {
 	thumb.addEventListener("click", () => {
 		const modalImg = document.getElementById("modal-img");
 		console.log(thumb.src);
 		modalImg.src = thumb.src;
+	});
+});
+
+const projectCards = document.querySelectorAll(".card");
+projectCards.forEach((card) => {
+	card.addEventListener("mouseover", () => {
+		card.children[1].children[1].classList.remove("text-truncate");
+		});
+	card.addEventListener("mouseout", () => {
+		card.children[1].children[1].classList.add("text-truncate");
 	});
 });
