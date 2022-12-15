@@ -11059,9 +11059,19 @@ input[type=text]:focus, input[type=text]:active, input[type=email]:focus, input[
   background: linear-gradient(left, transparent, rgb(88, 88, 88), rgb(88, 88, 88), transparent);
 }
 
-#puppyCarousel {
+div.container:has(#puppyCarousel) {
+  margin-top: -5rem;
+}
+
+div.row:has(#puppyCarousel) {
   height: 500px;
   overflow: hidden;
+}
+
+#puppyCarousel .carousel-item img {
+  padding-block: auto;
+  max-height: 500px;
+  aspect-ratio: 16/9;
 }
 
 /*# sourceMappingURL=style.css.map */
