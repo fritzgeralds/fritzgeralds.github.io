@@ -39,7 +39,7 @@ window.addEventListener("scroll", () => {
 			if (!link.getAttribute("href") === "#") {
 				link.setAttribute("href", link.getAttribute("href") + "-gap");
 			}
-		document.querySelector(".nav-link[href='#-gap']").setAttribute("href", "#");
+		// document.querySelector(".nav-link[href='#-gap']").setAttribute("href", "#");
 		});
 	}
 });

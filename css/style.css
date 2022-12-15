@@ -10814,6 +10814,12 @@ body {
   font-size: 4min;
   font-weight: 600;
   text-shadow: 0 0 0.5rem #000;
+  margin-left: 1.5em;
+}
+@media (max-width: 1200px) {
+  .hero-header {
+    margin: auto;
+  }
 }
 
 .hero-span {
@@ -10860,6 +10866,10 @@ body {
   width: 100%;
 }
 
+#projects:has(.card) {
+  position: relative;
+}
+
 .card {
   transition: all 0.4s ease;
 }
@@ -10873,6 +10883,11 @@ body {
 .card a {
   color: rgb(97, 0, 223);
   text-decoration: none;
+}
+@media (max-width: 1400px) {
+  .card h3, .card .h3 {
+    font-size: 1rem;
+  }
 }
 
 footer {
@@ -10984,10 +10999,10 @@ input[type=text]:focus, input[type=text]:active, input[type=email]:focus, input[
 }
 
 .link-disabled a {
-  color: rgb(58, 58, 58);
+  color: rgb(88, 88, 88);
   pointer-events: none;
   cursor: not-allowed;
-  text-decoration: line-through;
+  text-decoration: 2px line-through rgb(88, 88, 88);
 }
 
 #map_div {
@@ -10996,11 +11011,57 @@ input[type=text]:focus, input[type=text]:active, input[type=email]:focus, input[
   border-bottom: 2px solid rgb(88, 88, 88) !important;
   background-color: transparent !important;
 }
-
 @media (max-width: 992px) {
   #map_div {
     height: 450px;
   }
+}
+
+.card-body {
+  min-height: 103px;
+}
+
+.card-container {
+  height: 440px;
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .card-container .card-title {
+    flex-grow: 1;
+  }
+}
+@media (max-width: 1200px) {
+  .card-container {
+    height: 969px;
+  }
+}
+@media (max-width: 768px) {
+  .card-container {
+    height: 100%;
+  }
+}
+
+.divider {
+  height: 5px;
+  position: relative;
+  width: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse farthest-side at top center, rgb(97, 0, 223), transparent);
+}
+.divider:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  left: 0;
+  height: 10px;
+  background: linear-gradient(left, transparent, rgb(88, 88, 88), rgb(88, 88, 88), transparent);
+}
+
+#puppyCarousel {
+  height: 500px;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
