@@ -50,7 +50,6 @@ const menuToggle = document.getElementById("collapsibleNavbar");
 const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false });
 navLinks.forEach(function (l) {
 	l.addEventListener("click", function () {
-		// avoid flickering on desktop
 		if (menuToggle.classList.contains("show")) {
 			bsCollapse.toggle();
 		}
