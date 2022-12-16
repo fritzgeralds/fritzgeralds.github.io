@@ -10883,7 +10883,7 @@ body {
 .card {
   position: relative;
   transition: all 0.4s ease;
-  z-index: 999;
+  z-index: 99;
 }
 .card:hover {
   transform: scale(1.1);
@@ -10961,6 +10961,7 @@ footer {
 
 .animate {
   animation: popIn 1s ease;
+  animation-delay: 0.5s;
 }
 
 textarea {
