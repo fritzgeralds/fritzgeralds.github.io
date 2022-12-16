@@ -10794,7 +10794,17 @@ textarea.form-control-lg {
   display: none;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -10871,7 +10881,9 @@ body {
 }
 
 .card {
+  position: relative;
   transition: all 0.4s ease;
+  z-index: 999;
 }
 .card:hover {
   transform: scale(1.1);
@@ -10961,14 +10973,20 @@ textarea {
   height: 300px !important;
 }
 
-input[type=text], input[type=email], textarea {
+input[type=text],
+input[type=email],
+textarea {
   border: 1px solid rgb(48, 48, 48) !important;
   border-right: 2px solid rgb(88, 88, 88) !important;
   border-bottom: 2px solid rgb(88, 88, 88) !important;
   background-color: transparent !important;
   color: rgb(255, 255, 255);
 }
-input[type=text]:focus, input[type=text]:active, input[type=email]:focus, input[type=email]:active, textarea:focus, textarea:active {
+input[type=text]:focus, input[type=text]:active,
+input[type=email]:focus,
+input[type=email]:active,
+textarea:focus,
+textarea:active {
   border: 1px solid rgb(48, 48, 48) !important;
   border-right: 2px solid rgb(88, 88, 88) !important;
   border-bottom: 2px solid rgb(88, 88, 88) !important;
